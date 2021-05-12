@@ -1,6 +1,9 @@
 maphash
 #######
 
+.. image:: https://img.shields.io/pypi/v/maphash?color=%2334D058&label=pypi%20package
+   :target: https://pypi.org/project/maphash/
+
 Python library for hashing lists, dicts and other JSON serializeable data structures.
 
 .. image:: https://asciinema.org/a/5L806jTbVjlpOdy8PWplAg9MC.svg
