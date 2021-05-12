@@ -2,9 +2,9 @@ __version__ = "0.1.0"
 
 import hashlib
 import json
-from typing import Dict, List, Union
+from typing import Dict, List, Optional, Union
 
-Serializable = Union[Dict, List, str, int, float]
+Serializable = Optional[Union[Dict, List, str, int, float]]
 
 
 def json_dump(obj: Serializable) -> str:
@@ -14,4 +14,4 @@ def json_dump(obj: Serializable) -> str:
 
 def maphash(obj: Serializable) -> str:
     """"""
-    return hashlib.sha3_256(json_dump(obj)).hexdigest()
+    return hashlib.sha3_256(json_dump(obj).encode("utf-8")).hexdigest()
