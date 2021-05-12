@@ -14,4 +14,4 @@ def json_dump(obj: Serializable) -> str:
 
 def maphash(obj: Serializable) -> str:
     """"""
-    return hashlib.sha3_256(json_dump(obj),).hexdigest()
+    return hashlib.sha3_256(json_dump(obj)).hexdigest()
