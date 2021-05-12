@@ -3,6 +3,9 @@ maphash
 
 Python library for hashing lists, dicts and other JSON serializeable data structures.
 
+.. image:: https://asciinema.org/a/5L806jTbVjlpOdy8PWplAg9MC.svg
+   :target: https://asciinema.org/a/5L806jTbVjlpOdy8PWplAg9MC
+
 Coding Conventions
 ==================
 
