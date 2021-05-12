@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/myint/autoflake
+    rev: b330072a26bb13aea8843f8083cee5332d71f78f
+    hooks:
+      - id: autoflake
+        args: [
+            '--in-place',
+            '--remove-all-unused-imports',
+            '--remove-unused-variables',
+            '--ignore-init-module-imports'
+        ]
+
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.4.2
+    hooks:
+      - id: isort
+        args: [
+            '--filter-files',
+            '--profile',
+            'black'
+        ]
+
+  - repo: https://github.com/psf/black
+    rev: 19.10b0
+    hooks:
+      - id: black
+
+default_language_version:
+  python: python3.8
