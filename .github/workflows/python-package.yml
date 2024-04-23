@@ -41,5 +41,5 @@ jobs:
       if: success() || failure() # run this step even if previous step failed
       with:
         name: Pytest Tests
-        path: reports/pytest-*.xml
+        path: /home/runner/work/maphash/maphash/reports/pytest*.xml
         reporter: java-junit
