@@ -34,4 +34,12 @@ jobs:
         poetry install
     - name: Test with pytest
       run: |
-        poetry run pytest
+        mkdir reports
+        poetry run pytest --junitxml=reports/pytest_report.xml
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: success() || failure() # run this step even if previous step failed
+      with:
+        name: Pytest Tests
+        path: reports/pytest-*.xml
+        reporter: java-junit
